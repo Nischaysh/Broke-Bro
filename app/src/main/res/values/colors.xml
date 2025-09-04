@@ -2,23 +2,27 @@
 <resources>
 
     <!-- Light Theme Colors -->
-    <color name="primary">#FF7F11</color>
-    <color name="primary_variant">#E6730D</color>
-    <color name="secondary">#FFD180</color>
-    <color name="background">#FFFFFF</color>
-    <color name="surface">#FFF3E0</color>
+    <color name="primary">#FF7F11</color> <!-- Bold vibrant orange -->
+    <color name="primary_variant">#E56700</color> <!-- Slightly darker orange -->
 
+    <color name="secondary">#00C2C7</color> <!-- Teal/Cyan pop (Gen Z accent) -->
+    <color name="accent">#8B5CF6</color> <!-- Playful purple for highlights -->
+    <color name="background">#FFFFFF</color> <!-- Clean white -->
+    <color name="surface">#F9FAFB</color> <!-- Neutral, modern surface -->
 
+    <!-- Contrast Texts -->
     <color name="on_primary">#FFFFFF</color>
-    <color name="on_secondary">#000000</color>
-    <color name="on_background">#000000</color>
-    <color name="on_surface">#000000</color>
+    <color name="on_secondary">#FFFFFF</color>
+    <color name="on_accent">#FFFFFF</color>
+    <color name="on_background">#111111</color>
+    <color name="on_surface">#111111</color>
 
-    <!-- Light Theme Text -->
-    <color name="text_primary">#212121</color>
-    <color name="text_secondary">#757575</color>
-    <color name="text_disabled">#BDBDBD</color>
-    <color name="text_link">#FF7F11</color>
+    <!-- Text Colors -->
+    <color name="text_primary">#1A1A1A</color> <!-- Deep charcoal -->
+    <color name="text_secondary">#6B7280</color> <!-- Modern grey -->
+    <color name="text_disabled">#9CA3AF</color> <!-- Softer grey -->
+    <color name="text_link">#00C2C7</color> <!-- Matches accent teal -->
+
 
 
 
