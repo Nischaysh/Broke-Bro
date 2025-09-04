@@ -42,10 +42,10 @@ class OnboardingActivity : AppCompatActivity() {
         val dotsIndicator = binding.dotsIndicator
         dotsIndicator.attachTo(binding.viewPager)
 
-//        binding.btnSkip.setOnClickListener {
-//            startActivity(Intent(this, LoginActivity::class.java))
-//            finish()
-//        }
+        binding.btnSkip.setOnClickListener {
+            startActivity(Intent(this, RoleActivity::class.java))
+            finish()
+        }
     }
 
 }
