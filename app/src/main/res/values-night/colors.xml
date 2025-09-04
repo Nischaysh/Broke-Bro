@@ -18,6 +18,10 @@
     <color name="on_background">#F5F5F5</color>
     <color name="on_surface">#E5E5E5</color>
 
+    <color name="black">#FFFFFF</color> <!-- White for dark mode -->
+    <color name="white">#000000</color> <!-- Black for dark mode -->
+    <color name="border_color">#3A3D42</color> <!-- Dark mode border -->
+
     <!-- Text Colors -->
     <color name="text_primary">#FFFFFF</color> <!-- White for strong contrast -->
     <color name="text_secondary">#A3A3A3</color> <!-- Muted grey -->

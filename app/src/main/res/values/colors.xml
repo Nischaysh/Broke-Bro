@@ -17,6 +17,10 @@
     <color name="on_background">#111111</color>
     <color name="on_surface">#111111</color>
 
+    <color name="black">#000000</color> <!-- Black for light mode -->
+    <color name="white">#FFFFFF</color> <!-- White for light mode -->
+    <color name="border_color">#E6E9EE</color> <!-- Light mode border -->
+
     <!-- Text Colors -->
     <color name="text_primary">#1A1A1A</color> <!-- Deep charcoal -->
     <color name="text_secondary">#6B7280</color> <!-- Modern grey -->

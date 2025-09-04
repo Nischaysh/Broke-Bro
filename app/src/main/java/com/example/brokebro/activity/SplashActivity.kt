@@ -1,4 +1,4 @@
-package com.example.brokebro
+package com.example.brokebro.activity
 
 import android.content.Intent
 import android.os.Bundle
@@ -6,10 +6,8 @@ import android.os.Handler
 import android.os.Looper
 import android.view.animation.AnimationUtils
 import android.widget.ImageView
-import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
+import com.example.brokebro.R
 
 class SplashActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -24,7 +22,7 @@ class SplashActivity : AppCompatActivity() {
 
         // Delay for 2 seconds
         Handler(Looper.getMainLooper()).postDelayed({
-            startActivity(Intent(this, MainActivity::class.java))
+            startActivity(Intent(this, OnboardingActivity::class.java))
             finish()
         }, 1000)
     }
