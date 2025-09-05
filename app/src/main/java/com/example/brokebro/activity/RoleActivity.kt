@@ -11,6 +11,7 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.example.brokebro.R
 import com.example.brokebro.databinding.ActivityRoleBinding
+import com.example.brokebro.startHeroTransition
 import com.google.android.material.card.MaterialCardView
 
 class RoleActivity : AppCompatActivity() {
@@ -43,8 +44,10 @@ class RoleActivity : AppCompatActivity() {
             selectedCard?.let {
                 if (it == binding.studentCard) {
                     Toast.makeText(this, "Student selected", Toast.LENGTH_SHORT).show()
+                    binding.studentCard.startHeroTransition(this, LoginActivity::class.java, "hero_view")
                 } else if (it == binding.businessCard) {
                     Toast.makeText(this, "Business selected", Toast.LENGTH_SHORT).show()
+                    binding.businessCard.startHeroTransition(this, LoginActivity::class.java, "hero_view")
                 }
             } ?: Toast.makeText(this, "Please select a role", Toast.LENGTH_SHORT).show()
         }
