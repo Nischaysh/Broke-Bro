@@ -44,10 +44,24 @@ class RoleActivity : AppCompatActivity() {
             selectedCard?.let {
                 if (it == binding.studentCard) {
                     Toast.makeText(this, "Student selected", Toast.LENGTH_SHORT).show()
-                    binding.studentCard.startHeroTransition(this, LoginActivity::class.java, "hero_view")
+                    binding.studentCard.startHeroTransition(
+                        this,
+                        LoginActivity::class.java,
+                        "hero_view",
+                        mapOf(
+                            "Role" to "Student"
+                        )
+                    )
                 } else if (it == binding.businessCard) {
                     Toast.makeText(this, "Business selected", Toast.LENGTH_SHORT).show()
-                    binding.businessCard.startHeroTransition(this, LoginActivity::class.java, "hero_view")
+                    binding.businessCard.startHeroTransition(
+                        this,
+                        LoginActivity::class.java,
+                        "hero_view",
+                        mapOf(
+                            "Role" to "Business"
+                        )
+                    )
                 }
             } ?: Toast.makeText(this, "Please select a role", Toast.LENGTH_SHORT).show()
         }
