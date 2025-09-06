@@ -20,6 +20,7 @@
     <color name="black">#000000</color> <!-- Black for light mode -->
     <color name="white">#FFFFFF</color> <!-- White for light mode -->
     <color name="border_color">#E6E9EE</color> <!-- Light mode border -->
+    <color name="icon">#6B7280</color>
 
     <!-- Text Colors -->
     <color name="text_primary">#1A1A1A</color> <!-- Deep charcoal -->

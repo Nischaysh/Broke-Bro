@@ -8,6 +8,7 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.example.brokebro.R
 import com.example.brokebro.databinding.ActivityLoginBinding
+import com.example.brokebro.startHeroTransition
 
 class LoginActivity : AppCompatActivity() {
     private lateinit var binding: ActivityLoginBinding
@@ -24,6 +25,13 @@ class LoginActivity : AppCompatActivity() {
         val extra = intent.getStringExtra("Role")
         binding.continueButton.setOnClickListener {
             Toast.makeText(this, extra, Toast.LENGTH_SHORT).show()
+        }
+        binding.tvCreateAccount.setOnClickListener {
+           binding.cardLogin.startHeroTransition(
+            this,
+            StudentSigninActivity::class.java,
+            "hero",
+        )
         }
     }
 }
