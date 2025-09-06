@@ -7,24 +7,24 @@
     android:layout_height="match_parent"
     android:background="@color/background"
     android:transitionName="hero_view"
-    tools:context=".activity.StudentSigninActivity">
+    tools:context=".activity.BusinessSigninActivity">
 
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintEnd_toEndOf="parent">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:paddingBottom="10dp"
-            android:paddingHorizontal="24dp">
+            android:paddingHorizontal="24dp"
+            android:paddingBottom="10dp">
 
-            <!-- Logo and Title -->
+            <!-- Title -->
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -40,10 +40,12 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
-                android:text="Join as Student"
+                android:text="Join as Business"
                 android:textColor="@color/text_secondary"
                 android:textSize="14sp"
                 android:layout_marginBottom="22dp" />
+
+            <!-- Toggle Buttons -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -56,14 +58,13 @@
                 <androidx.appcompat.widget.AppCompatButton
                     android:id="@+id/btnStudent"
                     android:layout_width="0dp"
-                    android:transitionName="hero_view"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:background="@drawable/primary_bg"
-                    android:backgroundTint="@color/secondary"
                     android:layout_marginEnd="8dp"
-                    android:textColor="@color/on_secondary"
+                    android:background="@drawable/primary_bg"
+                    android:backgroundTint="@color/surface"
                     android:text="Student"
+                    android:textColor="@color/on_surface"
                     android:textAllCaps="false"
                     android:textSize="14sp" />
 
@@ -72,50 +73,24 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:transitionName="busniess_to_student"
-                    android:background="@drawable/primary_bg"
+                    android:transitionName="hero_view"
                     android:layout_marginStart="8dp"
-                    android:backgroundTint="@color/surface"
+                    android:background="@drawable/primary_bg"
+                    android:backgroundTint="@color/secondary"
                     android:text="Business"
-                    android:textColor="@color/on_surface"
+                    android:textColor="@color/on_secondary"
                     android:textAllCaps="false"
                     android:textSize="14sp" />
 
             </LinearLayout>
 
-            <!-- Profile Photo Section -->
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:gravity="center_vertical"
-                android:layout_marginBottom="16dp">
-
-                <ImageView
-                    android:id="@+id/ivProfilePhoto"
-                    android:layout_width="56dp"
-                    android:layout_height="56dp"
-                    android:background="@drawable/circle_bg"
-                    android:src="@drawable/ic_camera"
-                    android:scaleType="center"
-                    android:layout_marginEnd="16dp" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Add a profile photo"
-                    android:textColor="@color/text_secondary"
-                    android:textSize="16sp" />
-
-            </LinearLayout>
-
-            <!-- Full Name Field -->
+            <!-- Company Name -->
             <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="16dp"
-                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                app:startIconDrawable="@drawable/ic_person"
+                app:startIconDrawable="@drawable/ic_business2"
                 app:boxCornerRadiusBottomEnd="20dp"
                 app:boxCornerRadiusBottomStart="20dp"
                 app:boxCornerRadiusTopEnd="20dp"
@@ -123,21 +98,20 @@
                 app:startIconTint="@color/icon">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/etFullName"
+                    android:id="@+id/etCompanyName"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Full Name"
-                    android:inputType="textPersonName"
+                    android:hint="Company Name"
+                    android:inputType="textCapWords"
                     android:textSize="16sp" />
-
             </com.google.android.material.textfield.TextInputLayout>
 
-            <!-- Email Field -->
+            <!-- Email -->
             <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="16dp"
-                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 app:startIconDrawable="@drawable/ic_email"
                 app:boxCornerRadiusBottomEnd="20dp"
                 app:boxCornerRadiusBottomStart="20dp"
@@ -149,18 +123,17 @@
                     android:id="@+id/etEmail"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Email"
+                    android:hint="Business Email"
                     android:inputType="textEmailAddress"
                     android:textSize="16sp" />
-
             </com.google.android.material.textfield.TextInputLayout>
 
-            <!-- Phone Number Field -->
+            <!-- Phone -->
             <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="16dp"
-                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 app:startIconDrawable="@drawable/ic_phone"
                 app:boxCornerRadiusBottomEnd="20dp"
                 app:boxCornerRadiusBottomStart="20dp"
@@ -175,7 +148,6 @@
                     android:hint="Phone Number"
                     android:inputType="phone"
                     android:textSize="16sp" />
-
             </com.google.android.material.textfield.TextInputLayout>
 
             <!-- Password Fields Row -->
@@ -235,59 +207,13 @@
 
             </LinearLayout>
 
-            <!-- College/University Field -->
+            <!-- Company Type / Industry -->
             <com.google.android.material.textfield.TextInputLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="16dp"
-                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                app:startIconDrawable="@drawable/ic_school"
-                app:boxCornerRadiusBottomEnd="20dp"
-                app:boxCornerRadiusBottomStart="20dp"
-                app:boxCornerRadiusTopEnd="20dp"
-                app:boxCornerRadiusTopStart="20dp"
-                app:startIconTint="@color/icon">
-
-                <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/etCollege"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:hint="College / University"
-                    android:inputType="text"
-                    android:textSize="16sp" />
-
-            </com.google.android.material.textfield.TextInputLayout>
-
-            <!-- Course/Major Field -->
-            <com.google.android.material.textfield.TextInputLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="16dp"
-                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                app:startIconDrawable="@drawable/ic_book"
-                app:boxCornerRadiusBottomEnd="20dp"
-                app:boxCornerRadiusBottomStart="20dp"
-                app:boxCornerRadiusTopEnd="20dp"
-                app:boxCornerRadiusTopStart="20dp"
-                app:startIconTint="@color/icon">
-
-                <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/etCourseMajor"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:hint="Course / Major"
-                    android:inputType="text"
-                    android:textSize="16sp" />
-
-            </com.google.android.material.textfield.TextInputLayout>
-
-            <!-- Year of Study Dropdown -->
-            <com.google.android.material.textfield.TextInputLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="24dp"
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
-                app:startIconDrawable="@drawable/ic_calendar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                app:startIconDrawable="@drawable/ic_work"
                 app:boxCornerRadiusBottomEnd="20dp"
                 app:boxCornerRadiusBottomStart="20dp"
                 app:boxCornerRadiusTopEnd="20dp"
@@ -298,10 +224,31 @@
                     android:id="@+id/spinnerYearOfStudy"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Year of Study"
+                    android:hint="Company Type / Industry"
                     android:inputType="none"
                     android:textSize="16sp" />
+            </com.google.android.material.textfield.TextInputLayout>
 
+            <!-- Address -->
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="24dp"
+                app:boxCornerRadiusBottomEnd="20dp"
+                app:boxCornerRadiusBottomStart="20dp"
+                app:boxCornerRadiusTopEnd="20dp"
+                app:boxCornerRadiusTopStart="20dp"
+                app:startIconDrawable="@drawable/ic_location"
+                app:startIconTint="@color/icon">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etAddress"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Company Address / Location"
+                    android:inputType="textPostalAddress"
+                    android:textSize="16sp" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <LinearLayout
@@ -397,7 +344,7 @@
 
             </LinearLayout>
 
-            <!-- Sign Up Button -->
+            <!-- Sign Up -->
             <Button
                 android:id="@+id/btnSignUp"
                 android:layout_width="match_parent"
@@ -410,12 +357,12 @@
                 android:background="@drawable/primary_bg"
                 android:layout_marginBottom="24dp" />
 
-            <!-- Already have account text -->
+            <!-- Already have account -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
                 android:gravity="center"
+                android:orientation="horizontal"
                 android:layout_marginBottom="32dp">
 
                 <TextView
@@ -432,14 +379,11 @@
                     android:text="Log in"
                     android:textColor="@color/primary"
                     android:textSize="16sp"
-                    android:textStyle="bold"
                     android:clickable="true"
+                    android:textStyle="bold"
                     android:focusable="true"
                     android:background="?android:attr/selectableItemBackgroundBorderless" />
-
             </LinearLayout>
-
-
         </LinearLayout>
     </androidx.core.widget.NestedScrollView>
 

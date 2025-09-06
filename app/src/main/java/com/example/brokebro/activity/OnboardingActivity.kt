@@ -34,8 +34,7 @@ class OnboardingActivity : AppCompatActivity() {
             }
             else {
                 // Last screen -> go to MainActivity
-                startActivity(Intent(this, MainActivity::class.java))
-                finish()
+                startActivity(Intent(this, RoleActivity::class.java))
             }
         }
 
@@ -43,8 +42,7 @@ class OnboardingActivity : AppCompatActivity() {
         dotsIndicator.attachTo(binding.viewPager)
 
         binding.btnSkip.setOnClickListener {
-            startActivity(Intent(this, RoleActivity::class.java))
-            finish()
+            startActivity(Intent(this, LoginActivity::class.java))
         }
     }
 

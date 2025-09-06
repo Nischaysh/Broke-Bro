@@ -12,6 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.BrokeBro">
         <activity
+            android:name=".activity.BusinessSigninActivity"
+            android:exported="false" />
+        <activity
             android:name=".activity.StudentSigninActivity"
             android:exported="false" />
         <activity

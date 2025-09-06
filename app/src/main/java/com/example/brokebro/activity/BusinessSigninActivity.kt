@@ -6,15 +6,14 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.example.brokebro.R
-import com.example.brokebro.databinding.ActivityStudentSigninBinding
+import com.example.brokebro.databinding.ActivityBusniessSigninBinding
 import com.example.brokebro.startHeroTransition
 
-class StudentSigninActivity : AppCompatActivity() {
-
-    private lateinit var binding: ActivityStudentSigninBinding
+class BusinessSigninActivity : AppCompatActivity() {
+    private lateinit var binding: ActivityBusniessSigninBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityStudentSigninBinding.inflate(layoutInflater)
+        binding = ActivityBusniessSigninBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
         setupYearOfStudySpinner()
@@ -25,15 +24,12 @@ class StudentSigninActivity : AppCompatActivity() {
         }
 
         binding.tvLogIn.setOnClickListener {
-            binding.btnStudent.startHeroTransition(
+            binding.btnBusiness.startHeroTransition(
                 this,
                 LoginActivity::class.java,
                 "hero_view",
-
                 )
         }
-
-
     }
     private fun setupYearOfStudySpinner() {
         val years = resources.getStringArray(R.array.year_of_study_options)

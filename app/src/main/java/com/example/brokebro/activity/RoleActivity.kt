@@ -38,6 +38,14 @@ class RoleActivity : AppCompatActivity() {
             selectCard(binding.businessCard, binding.studentCard)
             selectedCard = binding.businessCard
         }
+        binding.tvLogin.setOnClickListener {
+            binding.studentCard.startHeroTransition(
+                this,
+                LoginActivity::class.java,
+                "hero_view",
+
+            )
+        }
 
         // Continue button click (optional)
         binding.continueButton.setOnClickListener {
@@ -46,7 +54,7 @@ class RoleActivity : AppCompatActivity() {
                     Toast.makeText(this, "Student selected", Toast.LENGTH_SHORT).show()
                     binding.studentCard.startHeroTransition(
                         this,
-                        LoginActivity::class.java,
+                        StudentSigninActivity::class.java,
                         "hero_view",
                         mapOf(
                             "Role" to "Student"
@@ -56,7 +64,7 @@ class RoleActivity : AppCompatActivity() {
                     Toast.makeText(this, "Business selected", Toast.LENGTH_SHORT).show()
                     binding.businessCard.startHeroTransition(
                         this,
-                        LoginActivity::class.java,
+                        BusinessSigninActivity::class.java,
                         "hero_view",
                         mapOf(
                             "Role" to "Business"

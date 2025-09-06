@@ -176,38 +176,61 @@
                 android:layout_marginBottom="32dp"
                 android:orientation="horizontal">
 
-                <Button
+                <com.google.android.material.card.MaterialCardView
                     android:id="@+id/btnGoogle"
                     android:layout_width="0dp"
                     android:layout_height="48dp"
                     android:layout_marginEnd="8dp"
                     android:layout_weight="1"
-                    android:background="@drawable/social_bg"
-                    android:drawableLeft="@drawable/ic_google"
-                    android:drawablePadding="8dp"
-                    android:ellipsize="end"
-                    android:singleLine="true"
-                    android:text="Google"
-                    android:textColor="@color/on_background"
-                    android:textSize="14sp"
-                    app:backgroundTint="@color/background"
-                    tools:ignore="ButtonStyle" />
+                    android:backgroundTint="@color/background"
+                    app:strokeColor="@color/border_color" >
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="8dp"
+                            android:src="@drawable/ic_google"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/on_background"
+                            android:textSize="14sp"
+                            android:text="GOOGLE"/>
 
-                <Button
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
                     android:id="@+id/btnFacebook"
                     android:layout_width="0dp"
                     android:layout_height="48dp"
-                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="8dp"
                     android:layout_weight="1"
-                    android:background="@drawable/social_bg"
-                    android:drawableLeft="@drawable/ic_facebook"
-                    android:drawablePadding="8dp"
-                    android:ellipsize="end"
-                    android:singleLine="true"
-                    android:text="Facebook"
-                    android:textColor="@color/on_background"
-                    android:textSize="14sp"
-                    app:backgroundTint="@color/background" />
+                    android:backgroundTint="@color/background"
+                    app:strokeColor="@color/border_color" >
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="8dp"
+                            android:src="@drawable/ic_facebook"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/on_background"
+                            android:textSize="14sp"
+                            android:text="FACEBOOK"/>
+
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
 
             </LinearLayout>
 
@@ -277,7 +300,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Sign In"
-                    android:textColor="@color/text_primary"
+                    android:textColor="@color/primary"
                     android:textSize="14sp"
                     android:textStyle="bold"
                     android:clickable="true"
